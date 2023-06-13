@@ -9,4 +9,9 @@ class Carnival
   def most_popular_ride
     rides.max_by { |ride| ride.rider_log.values.sum }
   end
+
+  def most_profitable_ride
+    rides.max_by(&:total_revenue)
+  end
+  
 end
