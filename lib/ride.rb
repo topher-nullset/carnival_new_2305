@@ -27,6 +27,6 @@ class Ride
   private
 
   def can_board?(visitor)
-    visitor.tall_enough?(min_height) && visitor.preferences.include?(excitement)
+    visitor.tall_enough?(min_height) && visitor.preferences.include?(excitement) && visitor.spending_money >= admission_fee
   end
 end
